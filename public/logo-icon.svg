@@ -1,11 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
-  <rect width="1024" height="1024" rx="192" fill="#0A0A0B"/>
-  <defs>
-    <radialGradient id="glow" cx="50%" cy="50%" r="30%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.08"/>
-      <stop offset="100%" stop-color="#6366F1" stop-opacity="0"/>
-    </radialGradient>
-  </defs>
-  <rect width="1024" height="1024" rx="192" fill="url(#glow)"/>
-  <text x="512" y="620" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="520" fill="#6366F1">B</text>
+  <!-- Calendar grid (top-left of B shape) -->
+  <rect x="96" y="96" width="160" height="160" rx="24" fill="#2D2D2D"/>
+  <rect x="320" y="96" width="160" height="160" rx="24" fill="#2D2D2D"/>
+  <rect x="96" y="320" width="160" height="160" rx="24" fill="#2D2D2D"/>
+  <rect x="320" y="320" width="160" height="160" rx="24" fill="#2D2D2D"/>
+  <!-- Clock/speech-bubble (bottom-right, amber) -->
+  <path d="M320 448 Q320 448 512 448 Q832 448 832 704 Q832 960 512 960 L320 960 L384 832 L320 832 Q128 832 128 640 Q128 448 320 448Z" fill="#F5A623"/>
+  <!-- Clock hands -->
+  <line x1="512" y1="704" x2="512" y2="576" stroke="white" stroke-width="48" stroke-linecap="round"/>
+  <line x1="512" y1="704" x2="608" y2="640" stroke="white" stroke-width="48" stroke-linecap="round"/>
+  <!-- Clock center dot -->
+  <circle cx="512" cy="704" r="24" fill="white"/>
 </svg>

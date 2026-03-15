@@ -1,4 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#0A0A0B"/>
-  <text x="16" y="22" text-anchor="middle" font-family="system-ui, sans-serif" font-weight="700" font-size="18" fill="#6366F1">B</text>
+  <!-- Calendar grid (top-left of B) -->
+  <rect x="3" y="3" width="5" height="5" rx="1" fill="#2D2D2D"/>
+  <rect x="10" y="3" width="5" height="5" rx="1" fill="#2D2D2D"/>
+  <rect x="3" y="10" width="5" height="5" rx="1" fill="#2D2D2D"/>
+  <rect x="10" y="10" width="5" height="5" rx="1" fill="#2D2D2D"/>
+  <!-- Clock/speech-bubble (bottom-right, amber) -->
+  <path d="M10 14 Q10 14 16 14 Q26 14 26 22 Q26 30 16 30 L10 30 L12 26 L10 26 Q4 26 4 20 Q4 14 10 14Z" fill="#F5A623"/>
+  <!-- Clock hands -->
+  <line x1="16" y1="22" x2="16" y2="18" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <line x1="16" y1="22" x2="19" y2="20" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Clock center dot -->
+  <circle cx="16" cy="22" r="0.8" fill="white"/>
 </svg>
