@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v5.18.1"><title>Skills: One Click to a Fully Configured Scheduling Link | Buxo Blog</title><meta name="description" content="Stop building your scheduling rules from scratch. Buxo Skills are pre-built templates for founders, recruiters, salespeople, coaches, and more. Pick one, add your hours, and you're live."><link rel="canonical" href="https://blog.buxo.ai/skills-one-click-scheduling/"><meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.buxo.ai/skills-one-click-scheduling/"><meta property="og:title" content="Skills: One Click to a Fully Configured Scheduling Link | Buxo Blog"><meta property="og:description" content="Stop building your scheduling rules from scratch. Buxo Skills are pre-built templates for founders, recruiters, salespeople, coaches, and more. Pick one, add your hours, and you're live."><meta property="og:image" content="https://blog.buxo.ai/images/skills-one-click-scheduling.png"><meta property="og:site_name" content="Buxo Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://blog.buxo.ai/skills-one-click-scheduling/"><meta name="twitter:title" content="Skills: One Click to a Fully Configured Scheduling Link | Buxo Blog"><meta name="twitter:description" content="Stop building your scheduling rules from scratch. Buxo Skills are pre-built templates for founders, recruiters, salespeople, coaches, and more. Pick one, add your hours, and you're live."><meta name="twitter:image" content="https://blog.buxo.ai/images/skills-one-click-scheduling.png"><meta property="article:published_time" content="2026-03-16T00:00:00.000Z"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" type="application/rss+xml" title="Buxo Blog" href="https://blog.buxo.ai/rss.xml"><link rel="sitemap" href="/sitemap-index.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"><!-- Prevent FOUC: apply theme before render --><script>
+(function () {
+  const stored = localStorage.getItem("theme");
+  if (stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    document.documentElement.classList.add("dark");
+  } else if (stored === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark");
+    }
+  }
+})();
+</script><link rel="stylesheet" href="/_astro/_slug_.CnZnG92j.css"></head> <body class="min-h-screen flex flex-col"> <header class="border-b border-themed"> <nav class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between"> <a href="https://buxo.ai" class="flex items-center gap-2 text-themed hover:text-accent transition-colors"> <img src="/logo-dark.png" alt="Buxo" height="28" class="dark:hidden"> <img src="/logo.png" alt="Buxo" height="28" class="hidden dark:block"> </a> <div class="flex items-center gap-4"> <a href="/" class="text-sm text-themed-muted hover:text-accent transition-colors">Posts</a> <a href="/rss.xml" class="text-sm text-themed-muted hover:text-accent transition-colors">RSS</a> <a href="https://buxo.ai" class="text-sm text-themed-muted hover:text-accent transition-colors" target="_blank" rel="noopener">buxo.ai</a> <button id="theme-toggle" type="button" aria-label="Toggle theme" class="p-2 rounded-lg border border-themed text-themed-muted hover:text-accent transition-colors cursor-pointer"> <!-- Sun icon (shown in dark mode) --> <svg id="icon-sun" class="hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <!-- Moon icon (shown in light mode) --> <svg id="icon-moon" class="hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> <!-- Auto icon (system) --> <svg id="icon-auto" class="hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </button> <script type="module">function l(){const t=document.getElementById("theme-toggle"),i=document.getElementById("icon-sun"),s=document.getElementById("icon-moon"),d=document.getElementById("icon-auto");if(!t||!i||!s||!d)return;const n=["light","dark","auto"];function o(){const e=localStorage.getItem("theme");return e==="light"||e==="dark"?e:"auto"}function c(e){const a=e==="dark"||e==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",a),i.classList.toggle("hidden",e!=="dark"),s.classList.toggle("hidden",e!=="light"),d.classList.toggle("hidden",e!=="auto"),t.setAttribute("aria-label",`Theme: ${e}. Click to change.`)}function r(e){e==="auto"?localStorage.removeItem("theme"):localStorage.setItem("theme",e),c(e)}c(o()),t.addEventListener("click",()=>{const e=o(),a=n[(n.indexOf(e)+1)%n.length];r(a)}),window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{o()==="auto"&&c("auto")})}l();document.addEventListener("astro:after-swap",l);</script> </div> </nav> </header> <main class="flex-1">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Skills: One Click to a Fully Configured Scheduling Link","description":"Stop building your scheduling rules from scratch. Buxo Skills are pre-built templates for founders, recruiters, salespeople, coaches, and more. Pick one, add your hours, and you're live.","datePublished":"2026-03-16T00:00:00.000Z","image":"https://blog.buxo.ai/images/skills-one-click-scheduling.png","author":{"@type":"Organization","name":"Buxo","url":"https://buxo.ai"},"publisher":{"@type":"Organization","name":"Buxo","url":"https://buxo.ai","logo":{"@type":"ImageObject","url":"https://blog.buxo.ai/logo-icon.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.buxo.ai/skills-one-click-scheduling/"}}</script> <article class="max-w-3xl mx-auto px-4 py-12"> <header class="mb-8"> <div class="text-sm text-themed-muted mb-3"> <time datetime="2026-03-16T00:00:00.000Z"> March 16, 2026 </time>  </div> <h1 class="text-3xl sm:text-4xl font-bold text-themed leading-tight mb-4">Skills: One Click to a Fully Configured Scheduling Link</h1> <p class="text-lg text-themed-muted">Stop building your scheduling rules from scratch. Buxo Skills are pre-built templates for founders, recruiters, salespeople, coaches, and more. Pick one, add your hours, and you&#39;re live.</p> <div class="flex flex-wrap gap-2 mt-4"> <a href="/tags/skills/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> skills </a><a href="/tags/product/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> product </a><a href="/tags/scheduling/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> scheduling </a><a href="/tags/templates/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> templates </a> </div> </header> <img src="/images/skills-one-click-scheduling.png" alt="Skills: One Click to a Fully Configured Scheduling Link" class="w-full rounded-lg mb-8 object-cover aspect-video"> <div class="prose text-themed">  <p>Every scheduling tool asks the same thing when you sign up: <em>What’s the name of your meeting? How long is it? What’s your availability?</em></p>
+<p>Then you’re on your own.</p>
+<p>You stare at a blank settings page, toggling dropdowns. Buffer time? Lead time? Daily caps? Booking window? Intent capture? You end up with a generic “30-min meeting” link that treats an investor pitch the same as a coffee chat.</p>
+<p>We think that’s backwards. <strong>Your scheduling link should know what kind of meeting it is before you touch a single setting.</strong></p>
+<p>That’s why we built Skills.</p>
+<hr>
+<h2 id="what-is-a-skill">What is a Skill?</h2>
+<p>A Skill is a one-click scheduling template. Pick one, and Buxo creates a fully configured event type with intelligent defaults: name, duration, buffer times, daily limits, booking window, intent capture questions, and natural language instructions for the AI agent.</p>
+<p>You just add your working hours. The Skill handles the rest.</p>
+<p>Here’s what happens when you select the <strong>Investor Pitch</strong> skill:</p>
+<ul>
+<li><strong>Name</strong>: Investor Pitch</li>
+<li><strong>Duration</strong>: 30 minutes</li>
+<li><strong>Lead time</strong>: 24 hours (so you can prep)</li>
+<li><strong>Max bookings per day</strong>: 3 (to avoid pitch fatigue)</li>
+<li><strong>Location</strong>: Zoom</li>
+<li><strong>Intent capture</strong>: “What stage/focus is your fund, and what’s your typical check size?”</li>
+<li><strong>Agent instructions</strong>: Cluster pitch meetings on the same day. Keep 15-minute buffers between calls for notes. Only offer 10am to 4pm slots. Keep Fridays light.</li>
+</ul>
+<p>That’s not a template. That’s <em>scheduling wisdom</em> from real founders, encoded into a single click.</p>
+<hr>
+<h2 id="22-skills-across-9-categories">22 Skills across 9 categories</h2>
+<p>We launched with 22 Skills organized into 9 categories. Each one was designed for a specific job and persona, not as a generic starting point.</p>
+<h3 id="fundraising">Fundraising</h3>
+<p>For founders raising capital. Every fundraising Skill enforces <strong>VIP hours</strong> (10am to 4pm only), because investors expect premium scheduling, and you should too.</p>
+<ul>
+<li><strong>Investor Pitch</strong>: Clusters pitches on the same day for narrative consistency. 15-min buffers for debrief notes.</li>
+<li><strong>VC Intro Call</strong>: Short 15-min calls with 48-hour lead time. No back-to-back.</li>
+<li><strong>Due Diligence Session</strong>: 45-min deep dives, max 2 per day, 72-hour lead time for document prep.</li>
+</ul>
+<h3 id="hiring--recruiting">Hiring &#x26; Recruiting</h3>
+<p>For hiring managers who know that interview fatigue kills evaluation quality.</p>
+<ul>
+<li><strong>Phone Screen</strong>: High-volume, clustered into efficient blocks. Back-to-back is fine for these.</li>
+<li><strong>Technical Interview</strong>: Max 2 per day, 30-min buffers for scoring notes. Mornings protected for deep work.</li>
+<li><strong>Culture Fit Round</strong>: Afternoon slots preferred for relaxed energy. 15-min reflection gaps.</li>
+<li><strong>Hiring Manager Final</strong>: VIP treatment. Max 2 per day, premium hours only, Fridays reserved for offer decisions.</li>
+</ul>
+<h3 id="sales">Sales</h3>
+<p>For AEs and sales teams who live and die by their pipeline.</p>
+<ul>
+<li><strong>Discovery Call</strong>: Morning slots for peak energy. Clustered on Tue to Thu.</li>
+<li><strong>Product Demo</strong>: 15-min buffer <em>before</em> each demo for environment setup. Clustered to stay in demo mode.</li>
+<li><strong>Sales Follow-up</strong>: End-of-day slots to keep mornings productive. Same-day booking allowed.</li>
+<li><strong>Client Onboarding Kickoff</strong>: VIP treatment. Max 2 per day, mornings only, never on Mondays.</li>
+</ul>
+<h3 id="consulting--coaching">Consulting &#x26; Coaching</h3>
+<p>For coaches, consultants, and advisors who protect their energy.</p>
+<ul>
+<li><strong>1:1 Coaching Session</strong>: Max 4 per day. Spread across the day, not clustered.</li>
+<li><strong>Strategy Session</strong>: Max 1 per day. Morning only. One-hour buffer before and after.</li>
+<li><strong>Office Hours</strong>: Packed tight into 2-hour blocks. Back-to-back, no gaps. High volume is fine.</li>
+</ul>
+<h3 id="podcast--media">Podcast &#x26; Media</h3>
+<p>For podcast hosts and media creators who need vocal rest and prep time.</p>
+<ul>
+<li><strong>Podcast Guest Recording</strong>: Max 1 per day, Tue to Thu only, 1-hour buffer before for vocal rest.</li>
+<li><strong>Pre-Interview Chat</strong>: Quick alignment calls. Casual, any time of day.</li>
+</ul>
+<h3 id="healthcare--wellness">Healthcare &#x26; Wellness</h3>
+<p>For practitioners who need clinical precision in their scheduling.</p>
+<ul>
+<li><strong>Patient Consultation</strong>: 10-min charting buffer between consultations. Lunch break protected.</li>
+<li><strong>Therapy Session</strong>: 50-min therapeutic hour. 10-min mandatory buffer. Max 6 per day to prevent compassion fatigue.</li>
+</ul>
+<h3 id="real-estate">Real Estate</h3>
+<p>For agents and brokers on the move.</p>
+<ul>
+<li><strong>Property Showing</strong>: Clustered for travel efficiency. 30-min gaps for driving between locations.</li>
+<li><strong>Buyer Consultation</strong>: Premium morning slots for big decisions.</li>
+</ul>
+<h3 id="internal--team">Internal &#x26; Team</h3>
+<p>For engineering managers and team leads.</p>
+<ul>
+<li><strong>1:1 with Direct Report</strong>: Batch ALL 1:1s on the same day. Tuesdays or Wednesdays preferred.</li>
+<li><strong>Skip-Level Meeting</strong>: Max 2 per day, 15-min prep buffer, mid-week only.</li>
+</ul>
+<h3 id="community--networking">Community &#x26; Networking</h3>
+<p>For community builders and founders growing their network.</p>
+<ul>
+<li><strong>Coffee Chat</strong>: End-of-day slots only. Max 2 per day. Fridays are ideal.</li>
+<li><strong>Community Office Hours</strong>: Packed into continuous blocks. Same day each week for consistency.</li>
+</ul>
+<hr>
+<h2 id="why-skills-work-better-than-blank-forms">Why Skills work better than blank forms</h2>
+<p>The problem with every scheduling tool is <strong>the blank form</strong>. You sign up, you get an empty event type, and you have to figure out what “lead time” means and whether 4 hours or 24 hours is right for your use case.</p>
+<p>Skills skip that entirely. The decisions are already made by people who’ve done the job:</p>
+<ol>
+<li>
+<p><strong>A founder who raised $10M</strong> figured out that clustering investor calls on the same day keeps your narrative tight. That’s now the Investor Pitch skill.</p>
+</li>
+<li>
+<p><strong>An engineering manager with 8 direct reports</strong> figured out that batching all 1:1s on one day protects the other four for deep work. That’s now the 1:1 skill.</p>
+</li>
+<li>
+<p><strong>A therapist</strong> knows that 50-minute sessions with 10-minute mandatory buffers prevent compassion fatigue. That’s the Therapy Session skill.</p>
+</li>
+</ol>
+<p>You’re not starting from zero. You’re starting from someone else’s hard-won scheduling wisdom.</p>
+<hr>
+<h2 id="skills-are-templates-not-locks">Skills are templates, not locks</h2>
+<p>Every Skill pre-fills your event type form. After that, it’s yours. Change the name. Adjust the duration. Remove an instruction. Add a new one. The Skill gives you a great starting point; you shape it to fit your exact workflow.</p>
+<p>There’s no “linked to a Skill” badge. No restrictions. Once you click “Use this,” the configuration belongs to you.</p>
+<hr>
+<h2 id="where-youll-find-skills">Where you’ll find Skills</h2>
+<h3 id="on-the-homepage-before-you-even-sign-up">On the homepage (before you even sign up)</h3>
+<p>The Buxo homepage features a Skills section with category tabs. Browse Fundraising, Hiring, Sales, Consulting, and more. Each card shows the Skill’s name, duration, location type, and a summary of what the AI agent does differently.</p>
+<p>Click “Use this” on any card, and you’re taken straight to signup with that Skill pre-loaded into your onboarding flow.</p>
+<h3 id="during-onboarding">During onboarding</h3>
+<p>Step 6 of onboarding shows a Skill picker grid. Instead of naming your first event type from scratch, browse by category and pick the one that fits. Or choose “Start from scratch” if you want full control.</p>
+<h3 id="from-the-dashboard">From the dashboard</h3>
+<p>Creating a new event type? You’ll see two options: “Start from a Skill” or “Start Empty.” The Skill picker modal gives you the same categorized grid, and your new event type is instantly pre-filled.</p>
+<hr>
+<h2 id="the-instructions-are-the-secret">The instructions are the secret</h2>
+<p>The most powerful part of any Skill isn’t the duration or the lead time. Those are just numbers. The real value is in the <strong>agent instructions</strong>: natural language rules that tell Buxo’s AI how to schedule this specific type of meeting.</p>
+<p>Take the Technical Interview skill:</p>
+<blockquote>
+<p>“Max 2 technical interviews per day. Keep 30-minute buffer between interviews for scoring notes. Prefer afternoons. Protect mornings for deep work. Never schedule back-to-back with other intensive meetings.”</p>
+</blockquote>
+<p>These aren’t settings you toggle. They’re <em>opinions</em> about how technical interviews should be scheduled, written in plain English. Buxo’s slot engine reads them and generates slots that respect every instruction.</p>
+<p>No other scheduling tool lets you do this. And Skills give you a head start with instructions that already work.</p>
+<hr>
+<h2 id="whats-next">What’s next</h2>
+<p>We’re adding new Skills every week based on what our users ask for. Legal consultations, academic office hours, real estate open houses, personal training sessions. If you have a meeting type that deserves its own Skill, let us know.</p>
+<p>The goal is simple: <strong>nobody should have to build their scheduling rules from scratch.</strong> Pick a Skill, add your hours, and you’re live.</p>
+<p><a href="https://buxo.ai">Get started at buxo.ai</a></p>
+<hr>
+<p><em>This is the second post on the Buxo blog. Follow along via <a href="/rss.xml">RSS</a> for engineering deep dives, product updates, and scheduling insights.</em></p>  </div> <footer class="mt-12 pt-6 border-t border-themed"> <div class="flex items-center gap-4"> <span class="text-sm text-themed-muted">Share</span> <a href="https://x.com/intent/tweet?text=Skills%3A%20One%20Click%20to%20a%20Fully%20Configured%20Scheduling%20Link&url=https%3A%2F%2Fblog.buxo.ai%2Fskills-one-click-scheduling%2F" target="_blank" rel="noopener noreferrer" class="text-themed-muted hover:text-accent transition-colors" title="Share on X"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.buxo.ai%2Fskills-one-click-scheduling%2F" target="_blank" rel="noopener noreferrer" class="text-themed-muted hover:text-accent transition-colors" title="Share on LinkedIn"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fblog.buxo.ai%2Fskills-one-click-scheduling%2F&t=Skills%3A%20One%20Click%20to%20a%20Fully%20Configured%20Scheduling%20Link" target="_blank" rel="noopener noreferrer" class="text-themed-muted hover:text-accent transition-colors" title="Share on Hacker News"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0v24h24V0H0zm12.8 13.4V19h-1.6v-5.6L7 5h1.8l3.2 5.8L15.2 5H17l-4.2 8.4z"></path></svg> </a> </div> </footer> </article>  </main> <footer class="border-t border-themed mt-16"> <div class="max-w-3xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-themed-muted"> <p>&copy; 2026 Buxo. All rights reserved.</p> <div class="flex items-center gap-4"> <a href="https://buxo.ai" class="hover:text-accent transition-colors" target="_blank" rel="noopener">Website</a> <a href="https://github.com/buxo-ai" class="hover:text-accent transition-colors" target="_blank" rel="noopener">GitHub</a> </div> </div> </footer> </body></html>
