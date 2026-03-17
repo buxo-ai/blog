@@ -1,83 +1,86 @@
 ---
-title: "Release 1.0.1 — Reschedule & Cancel, Done Right"
-description: "Invitees can now reschedule and cancel their own bookings. This release also hardens slot validation, fixes timezone display, and plugs a handful of security and reliability gaps."
+title: "Buxo 1.0.1: Your Invitees Can Now Reschedule Themselves"
+description: "No more 'can we move this?' emails. Buxo now lets invitees reschedule or cancel directly from their confirmation — and still respects every rule you set."
 pubDate: 2026-03-17
-tags: ["release", "product", "reschedule", "cancel"]
+tags: ["release", "product", "rescheduling", "scheduling"]
+heroImage: "/images/release-1-0-1.png"
 ---
 
-We shipped the reschedule and cancel feature in 1.0.0. This release is about making it *correct*.
+Every founder knows this moment.
 
-After a thorough internal review of the code, we found six gaps between what was planned and what the implementation actually enforced. We fixed all of them, added end-to-end tests, and caught two more bugs in QA. Here's what changed.
+A meeting is on the books. Your investor or prospect needs to move it. Instead of just moving it, they send you an email. You reply with new options. They pick one. You update the invite. Three emails for a five-minute problem.
 
----
+Today that changes.
 
-## What's new
+## What's new in Buxo 1.0.1
 
-### Invitees can reschedule and cancel their own bookings
+Every booking confirmation email now includes a **Manage Booking** link. Your invitee clicks it, picks a new time from your actual availability, and the booking updates automatically. No email thread. No back-and-forth. No you involved at all.
 
-Every booking confirmation email now includes a **Manage Booking** link. Click it and you get a simple page where you can:
+They can also cancel with an optional reason, directly from the same page.
 
-- Reschedule to any available slot — the same slot picker the invitee used to book in the first place, pre-loaded with their original timezone
-- Cancel with an optional reason
-
-No login required. The link is token-gated — it's tied to that specific booking and only works for the person who was invited.
-
----
-
-## What we fixed
-
-### Reschedule now respects your scheduling rules
-
-Previously, an invitee could reschedule to literally any future time — including midnight on a Sunday, a slot six months out, or times when the host's day was already at capacity.
-
-We fixed this. The reschedule endpoint now enforces the same rules as the original booking:
-
-- **Lead time** — can't book within your configured minimum notice window
-- **Scheduling window** — can't book further out than your max booking horizon
-- **Max bookings per day** — can't push a day past your daily cap
-- **Schedule hours** — can't reschedule to a time outside your configured working hours (e.g. you work Mon–Fri 9–6; an invitee can't reschedule to Saturday at 2am)
-
-### Double-cancel protection
-
-Cancelling the same booking twice used to silently succeed and send duplicate cancellation emails to both the host and invitee. Now the second cancel returns an error immediately, before any emails go out.
-
-### Timezone defaults to the invitee's original timezone
-
-The manage and reschedule pages previously used the browser's local timezone to display the booking time. If an invitee opened their link while traveling or on a different device, the displayed time would be wrong.
-
-Both pages now default to the timezone the invitee used when they originally booked. On the reschedule page, they can still switch timezones if they want — but the default is always the one that matches their original booking.
-
-### Calendar sync failures are now visible
-
-When a reschedule succeeded but the calendar event failed to update (e.g. a brief Google Calendar API error), the booking was silently marked as rescheduled with a stale calendar event. The host would see the new time in Buxo but the old time in their calendar — and not know.
-
-We now surface this explicitly: if the calendar sync fails, the success screen shows a notice saying the calendar event couldn't be updated and the host has been notified.
-
-### Cancel reason no longer logged in server access logs
-
-The cancellation reason text was sent as a URL query parameter (`?cancelReason=...`). Server access logs capture full request URLs, which meant user-entered free text was being written to logs.
-
-The reason is now sent in the request body instead.
+This is what self-serve rescheduling should look like: fast for them, invisible for you.
 
 ---
 
-## Bugs caught in QA
+## The part other scheduling tools get wrong
 
-### Hydration error on manage and reschedule pages
+Here is the thing about letting invitees reschedule: if the tool just lets them pick *any* future time, you have a problem.
 
-Both pages had a `<head>` tag nested inside the React component. In Next.js App Router, this is invalid — `<head>` can't be a child of `<body>` in a client component — and it was producing a React hydration warning on every single page load. Removed.
+Most scheduling tools treat rescheduling as a free-for-all. The invitee gets a calendar, they pick whatever looks good to them, and you end up with a meeting booked for 7am because technically you were "available."
 
-### Slot engine returning 500 for all slot requests
+Buxo does not work that way. When an invitee reschedules through Buxo, they see *exactly* what a new invitee would see. Every rule you set is enforced:
 
-The `accounts` table in the database was missing a `metadata` column that the slot engine's queries expected. This caused every request to the slots API to return a 500 error, which in turn made the reschedule page show "No available times" for every date. Fixed by adding the missing column.
+- **Your lead time.** If you require 24 hours notice, they cannot book tomorrow morning at 6am.
+- **Your scheduling window.** If you only open your calendar 14 days out, they cannot book three months from now.
+- **Your daily cap.** If you have set a limit of three meetings per day, a fourth reschedule into a full day will not go through.
+- **Your working hours.** If you only take calls Monday through Friday between 9am and 6pm, they cannot reschedule to Sunday at midnight.
 
----
-
-## Under the hood
-
-- `isWithinHostHours()` in the slot engine is now exported — it was private before, which meant the reschedule endpoint couldn't reuse it and had to duplicate the logic (or skip it, which is what happened)
-- Two missing DB columns added: `accounts.metadata` and four columns on `bookings` (`manage_token_hash`, `reschedule_count`, `original_start_time`, `original_end_time`)
+This is the difference between a smart scheduling agent and a dumb calendar widget. Buxo knows your rules. It enforces them whether someone is booking for the first time or the third.
 
 ---
 
-*If you're self-hosting: run `npm run db:push` in the backend directory before deploying this release.*
+## Timezone: always the one that makes sense
+
+When an invitee opens their manage link, they see their booking displayed in the timezone they originally used. Not the timezone of whatever device or location they happen to be in when they click the link.
+
+This matters more than it sounds. Founders take calls with people across every timezone. An investor in London books a call in GMT. They travel to New York, open the confirmation email, and see their meeting time. Without this fix, they would see the time in ET, which looks like a different time entirely.
+
+Buxo now shows the time in the invitee's original booking timezone by default. On the reschedule page, they can change it if they want to, but the starting point is always correct.
+
+---
+
+## One-click cancel
+
+Sometimes a meeting just does not happen.
+
+The same Manage Booking link lets invitees cancel directly, with an optional note explaining why. You get a cancellation notification. The slot reopens automatically. No manual cleanup on your end.
+
+If someone tries to cancel a meeting that is already cancelled (which happens more than you would think, usually because they clicked the link twice), Buxo blocks it cleanly and tells them the booking is already cancelled. No duplicate notifications sent to you.
+
+---
+
+## Why this release matters
+
+The reschedule and cancel feature shipped in Buxo 1.0.0. This release is about making it behave the way a smart scheduling tool should.
+
+The 1.0.0 version let invitees reschedule, but it did not enforce your rules when they did. That meant someone could technically reschedule into a time you never wanted available. This release closes that gap entirely.
+
+Every constraint you have told Buxo about your calendar, whether you set it at sign-up or trained it over time, now applies everywhere: new bookings, reschedules, and cancellations.
+
+Your rules run the calendar. Not just the first booking.
+
+---
+
+## What Buxo is
+
+Buxo is an AI scheduling tool for founders and executives who have opinions about their time.
+
+Instead of showing 15 open slots and hoping for the best, Buxo shows 3 curated times, the same 3 for every invitee regardless of their timezone, chosen based on the rules you have set in plain English. When one gets booked, the next best slot surfaces automatically.
+
+You train it once. It runs your calendar from then on.
+
+[Get started at buxo.ai](https://buxo.ai)
+
+---
+
+*Related: [Introducing Buxo: Your Calendar, Trained by You](/blog/hello-world)*
