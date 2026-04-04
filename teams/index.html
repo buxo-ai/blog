@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="Astro v5.18.1"><title>Buxo Teams: One Scheduling Link for Your Whole Company | Buxo Blog</title><meta name="description" content="Buxo Teams brings round-robin scheduling, collective availability, routing forms, and a shared team booking page to your company. Starting at $8.95 per seat. 44% less than Calendly Teams."><link rel="canonical" href="https://blog.buxo.ai/teams/"><meta name="theme-color" content="#0A0A0B" media="(prefers-color-scheme: dark)"><meta name="theme-color" content="#FAFAFA" media="(prefers-color-scheme: light)"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.buxo.ai/teams/"><meta property="og:title" content="Buxo Teams: One Scheduling Link for Your Whole Company | Buxo Blog"><meta property="og:description" content="Buxo Teams brings round-robin scheduling, collective availability, routing forms, and a shared team booking page to your company. Starting at $8.95 per seat. 44% less than Calendly Teams."><meta property="og:image" content="https://blog.buxo.ai/images/teams-hero.png"><meta property="og:site_name" content="Buxo Blog"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://blog.buxo.ai/teams/"><meta name="twitter:title" content="Buxo Teams: One Scheduling Link for Your Whole Company | Buxo Blog"><meta name="twitter:description" content="Buxo Teams brings round-robin scheduling, collective availability, routing forms, and a shared team booking page to your company. Starting at $8.95 per seat. 44% less than Calendly Teams."><meta name="twitter:image" content="https://blog.buxo.ai/images/teams-hero.png"><meta property="article:published_time" content="2026-04-05T00:00:00.000Z"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="alternate" type="application/rss+xml" title="Buxo Blog" href="https://blog.buxo.ai/rss.xml"><link rel="sitemap" href="/sitemap-index.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet"><!-- Prevent FOUC: apply theme before render --><script>
+(function () {
+  const stored = localStorage.getItem("theme");
+  if (stored === "dark" || (!stored && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    document.documentElement.classList.add("dark");
+  } else if (stored === "light") {
+    document.documentElement.classList.remove("dark");
+  } else {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      document.documentElement.classList.add("dark");
+    }
+  }
+})();
+</script><link rel="stylesheet" href="/_astro/_slug_.BkI_EQGN.css"></head> <body class="min-h-screen flex flex-col"> <header class="border-b border-themed"> <nav class="max-w-3xl mx-auto px-4 py-4 flex items-center justify-between"> <a href="https://buxo.ai" class="flex items-center gap-2 text-themed hover:text-accent transition-colors"> <img src="/logo-dark.png" alt="Buxo" height="28" class="dark:hidden"> <img src="/logo.png" alt="Buxo" height="28" class="hidden dark:block"> </a> <div class="flex items-center gap-4"> <a href="/" class="text-sm text-themed-muted hover:text-accent transition-colors">Posts</a> <a href="/rss.xml" class="text-sm text-themed-muted hover:text-accent transition-colors">RSS</a> <a href="https://buxo.ai" class="text-sm text-themed-muted hover:text-accent transition-colors" target="_blank" rel="noopener">buxo.ai</a> <button id="theme-toggle" type="button" aria-label="Toggle theme" class="p-2 rounded-lg border border-themed text-themed-muted hover:text-accent transition-colors cursor-pointer"> <!-- Sun icon (shown in dark mode) --> <svg id="icon-sun" class="hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path> </svg> <!-- Moon icon (shown in light mode) --> <svg id="icon-moon" class="hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path> </svg> <!-- Auto icon (system) --> <svg id="icon-auto" class="hidden w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path> </svg> </button> <script type="module">function l(){const t=document.getElementById("theme-toggle"),i=document.getElementById("icon-sun"),s=document.getElementById("icon-moon"),d=document.getElementById("icon-auto");if(!t||!i||!s||!d)return;const n=["light","dark","auto"];function o(){const e=localStorage.getItem("theme");return e==="light"||e==="dark"?e:"auto"}function c(e){const a=e==="dark"||e==="auto"&&window.matchMedia("(prefers-color-scheme: dark)").matches;document.documentElement.classList.toggle("dark",a),i.classList.toggle("hidden",e!=="dark"),s.classList.toggle("hidden",e!=="light"),d.classList.toggle("hidden",e!=="auto"),t.setAttribute("aria-label",`Theme: ${e}. Click to change.`)}function r(e){e==="auto"?localStorage.removeItem("theme"):localStorage.setItem("theme",e),c(e)}c(o()),t.addEventListener("click",()=>{const e=o(),a=n[(n.indexOf(e)+1)%n.length];r(a)}),window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",()=>{o()==="auto"&&c("auto")})}l();document.addEventListener("astro:after-swap",l);</script> </div> </nav> </header> <main class="flex-1">  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"Buxo Teams: One Scheduling Link for Your Whole Company","description":"Buxo Teams brings round-robin scheduling, collective availability, routing forms, and a shared team booking page to your company. Starting at $8.95 per seat. 44% less than Calendly Teams.","datePublished":"2026-04-05T00:00:00.000Z","image":"https://blog.buxo.ai/images/teams-hero.png","author":{"@type":"Organization","name":"Buxo","url":"https://buxo.ai"},"publisher":{"@type":"Organization","name":"Buxo","url":"https://buxo.ai","logo":{"@type":"ImageObject","url":"https://blog.buxo.ai/logo-icon.svg"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.buxo.ai/teams/"}}</script> <article class="max-w-3xl mx-auto px-4 py-12"> <header class="mb-8"> <div class="text-sm text-themed-muted mb-3"> <time datetime="2026-04-05T00:00:00.000Z"> April 5, 2026 </time>  </div> <h1 class="text-3xl sm:text-4xl font-bold text-themed leading-tight mb-4">Buxo Teams: One Scheduling Link for Your Whole Company</h1> <p class="text-lg text-themed-muted">Buxo Teams brings round-robin scheduling, collective availability, routing forms, and a shared team booking page to your company. Starting at $8.95 per seat. 44% less than Calendly Teams.</p> <div class="flex flex-wrap gap-2 mt-4"> <a href="/tags/teams/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> teams </a><a href="/tags/product/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> product </a><a href="/tags/round-robin/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> round-robin </a><a href="/tags/scheduling/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> scheduling </a><a href="/tags/announcement/" class="text-xs px-2 py-1 rounded-md bg-accent/10 text-accent font-medium hover:bg-accent/20 transition-colors"> announcement </a> </div> </header> <img src="/images/teams-hero.png" alt="Buxo Teams: One Scheduling Link for Your Whole Company" class="w-full rounded-lg mb-8 object-cover aspect-video"> <div class="prose text-themed">  <p>Scheduling for a team is a different problem than scheduling for yourself.</p>
+<p>When you’re solo, the question is “when am I free?” When you’re a team, the question is “who should take this meeting, and when can they do it?”</p>
+<p>Calendly’s answer to that costs $16 per seat per month. We think that’s too much.</p>
+<p>Today we’re launching <strong>Buxo Teams</strong> at <strong>$8.95 per seat per month</strong> with a 7-day free trial and no credit card required. Everything a modern team needs to stop manually coordinating meetings.</p>
+<hr>
+<h2 id="one-booking-page-for-your-whole-company">One booking page for your whole company</h2>
+<p>When you create a team on Buxo, you get a shared booking page at <code>buxo.ai/team/your-company</code>.</p>
+<p>Your invitees land there and see every meeting type your team offers: sales demos, onboarding calls, support sessions, whatever you’ve set up. They pick what they need, pick a time, and they’re done. They never have to find the right person’s individual link or send an email asking “who should I talk to?”</p>
+<p><img src="/images/teams-booking-page.png" alt="The team booking page showing &#x22;Sales Demo&#x22; for amcee with AI-suggested time slots"></p>
+<p>Your personal scheduling links still work exactly as before. Teams adds a shared layer on top, it doesn’t replace anything.</p>
+<hr>
+<h2 id="round-robin-distribute-meetings-automatically">Round-Robin: distribute meetings automatically</h2>
+<p>Round-Robin is the answer to “who should take this meeting?”</p>
+<p>You create a team event type (like “Sales Demo”), assign it to 3 reps, and set it to Round-Robin. When someone books:</p>
+<ol>
+<li>Your invitee sees all available times across all 3 reps, combined</li>
+<li>They pick a time that works for them</li>
+<li>Buxo assigns the rep with the lowest current meeting load who is available for that slot</li>
+</ol>
+<p>The invitee gets maximum flexibility. Your team gets fair, load-balanced distribution. Nobody has to manually assign meetings or rotate through a spreadsheet.</p>
+<p><img src="/images/teams-scheduling-type.png" alt="Scheduling type selection: Round-Robin is selected, with Collective and Individual as alternatives"></p>
+<hr>
+<h2 id="collective-book-time-with-everyone-at-once">Collective: book time with everyone at once</h2>
+<p>Collective is for meetings that need multiple people in the room.</p>
+<p>You set up a “Team Sync” or “Partnership Call” event type with 4 or 5 members assigned. Invitees only see slots where <strong>every assigned member is free</strong>. When they book, everyone gets the calendar invite automatically.</p>
+<p>No more “let me check with the team.” No more group email threads. The booking page handles the coordination.</p>
+<hr>
+<h2 id="assigning-the-right-people">Assigning the right people</h2>
+<p>When you create a team event type, you pick which members are part of it. For Round-Robin, they’re in the rotation. For Collective, they all need to be available. For Individual, you assign one specific host.</p>
+<p><img src="/images/teams-assign-members.png" alt="Step 4 of team event creation: Assign Members, showing John Doe (Owner) and Paul Smith (Member) both selected"></p>
+<p>One team can have multiple event types with completely different member assignments. Your sales team handles demos. Your CS team handles onboarding. Your founders take the partnership calls. All from the same company page.</p>
+<hr>
+<h2 id="routing-forms-send-people-to-the-right-meeting-automatically">Routing Forms: send people to the right meeting automatically</h2>
+<p>Sometimes your invitee doesn’t know which meeting type they need. That’s what Routing Forms are for.</p>
+<p>You build a short intake form: “What brings you here?” with a few options. Based on their answer, they get routed straight to the right event type and see the booking calendar. No human in the loop.</p>
+<p><img src="/images/teams-routing-form-details.png" alt="New Routing Form step 1: form name &#x22;Sales Qualification&#x22; with URL slug"></p>
+<p><img src="/images/teams-routing-form-fields.png" alt="Routing Form step 2: adding fields, a dropdown question with options"></p>
+<p>A few example setups:</p>
+<ul>
+<li><strong>“I want a product demo”</strong> → routes to your Sales Demo (Round-Robin across reps)</li>
+<li><strong>“I’m a current customer”</strong> → routes to your Customer Support event</li>
+<li><strong>“I want to discuss a partnership”</strong> → routes directly to a founder’s personal link</li>
+<li><strong>“Something else”</strong> → sends them to a contact form</li>
+</ul>
+<p>Your invitees feel like they’re getting a personalized experience. You’ve just built it once with routing rules.</p>
+<hr>
+<h2 id="roles-owner-admin-member">Roles: Owner, Admin, Member</h2>
+<p>Not everyone on your team needs the same access.</p>
+<ul>
+<li><strong>Owner</strong>: full control, manages billing</li>
+<li><strong>Admin</strong>: manages members and team event types, can’t touch billing</li>
+<li><strong>Member</strong>: uses team event types, manages their own personal settings</li>
+</ul>
+<p>Invite someone, pick their role, send it. The invitation expires in 7 days and they can join without needing you to do anything else.</p>
+<hr>
+<h2 id="managed-calendars-see-whos-connected-at-a-glance">Managed Calendars: see who’s connected at a glance</h2>
+<p>Round-Robin and Collective only work if your team members have connected their calendars. If someone’s calendar is disconnected, Buxo can’t see their availability and they won’t appear in scheduling.</p>
+<p>Admins and owners get a Managed Calendars view in Team Settings: every team member, their calendar status (connected, disconnected, not set up), all in one place.</p>
+<p><img src="/images/teams-managed-calendars.png" alt="Team Settings: Managed Calendars tab showing John Doe and Paul Smith both listed as &#x22;Not connected&#x22;"></p>
+<p>No more finding out mid-meeting that someone’s calendar wasn’t synced. The dashboard tells you before it becomes a problem.</p>
+<hr>
+<h2 id="building-a-team-event-type-what-it-looks-like">Building a team event type: what it looks like</h2>
+<p>Here’s the full flow for creating a new team event type:</p>
+<p><strong>Step 1:</strong> Name it, set the duration and location. The event lives under your team URL automatically.</p>
+<p><img src="/images/teams-create-event.png" alt="Step 1 of New Team Event Type: naming it &#x22;Sales Demo&#x22;, 30 min, Google Meet"></p>
+<p><strong>Steps 2 and 3:</strong> Set up your schedule and availability window.</p>
+<p><strong>Step 4:</strong> Choose how it’s scheduled: Round-Robin, Collective, or Individual.</p>
+<p><strong>Step 5:</strong> Pick which team members are assigned.</p>
+<p>That’s it. The team event type is live and bookable from your team page.</p>
+<hr>
+<h2 id="what-it-costs">What it costs</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Monthly</th><th>Annual</th></tr></thead><tbody><tr><td><strong>Buxo Teams</strong></td><td><strong>$8.95/seat</strong></td><td><strong>$89.50/seat/yr</strong></td></tr><tr><td>Calendly Teams</td><td>$16/seat</td><td>$144/seat/yr</td></tr><tr><td>Cal.com Team</td><td>$15/seat</td><td>—</td></tr></tbody></table>
+<p>Buxo Teams costs <strong>44% less than Calendly Teams</strong> and includes every feature: round-robin, collective, routing forms, analytics, role-based access, and custom branding.</p>
+<p>7-day free trial. No credit card required. Add your team and try it.</p>
+<hr>
+<h2 id="who-this-is-for">Who this is for</h2>
+<p>Buxo Teams is built for small-to-mid teams where scheduling coordination is a real daily cost:</p>
+<ul>
+<li><strong>Sales teams</strong> running demos and discovery calls across multiple reps</li>
+<li><strong>CS and support teams</strong> managing onboarding calls and check-ins</li>
+<li><strong>Recruiting teams</strong> coordinating interviews across hiring managers</li>
+<li><strong>Consulting firms</strong> routing client requests to the right person</li>
+<li><strong>Startups</strong> where the founders take partnership and press calls personally, but the team handles product demos</li>
+</ul>
+<p>If you’ve ever forwarded a calendar link, said “let me find the right person to connect you with,” or built a spreadsheet to track meeting distribution, this is built for you.</p>
+<hr>
+<h2 id="try-it-today">Try it today</h2>
+<p>Start a team from your Buxo dashboard, or visit <a href="https://buxo.ai">buxo.ai</a> to create an account.</p>
+<p>7-day free trial. No credit card. Your team can be set up in under 10 minutes.</p>
+<hr>
+<p><em>This is the latest post on the Buxo blog. Follow along via <a href="/rss.xml">RSS</a> for product updates and scheduling insights.</em></p>  </div> <footer class="mt-12 pt-6 border-t border-themed"> <div class="flex items-center gap-4"> <span class="text-sm text-themed-muted">Share</span> <a href="https://x.com/intent/tweet?text=Buxo%20Teams%3A%20One%20Scheduling%20Link%20for%20Your%20Whole%20Company&url=https%3A%2F%2Fblog.buxo.ai%2Fteams%2F" target="_blank" rel="noopener noreferrer" class="text-themed-muted hover:text-accent transition-colors" title="Share on X"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg> </a> <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fblog.buxo.ai%2Fteams%2F" target="_blank" rel="noopener noreferrer" class="text-themed-muted hover:text-accent transition-colors" title="Share on LinkedIn"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg> </a> <a href="https://news.ycombinator.com/submitlink?u=https%3A%2F%2Fblog.buxo.ai%2Fteams%2F&t=Buxo%20Teams%3A%20One%20Scheduling%20Link%20for%20Your%20Whole%20Company" target="_blank" rel="noopener noreferrer" class="text-themed-muted hover:text-accent transition-colors" title="Share on Hacker News"> <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M0 0v24h24V0H0zm12.8 13.4V19h-1.6v-5.6L7 5h1.8l3.2 5.8L15.2 5H17l-4.2 8.4z"></path></svg> </a> </div> </footer> </article>  </main> <footer class="border-t border-themed mt-16"> <div class="max-w-3xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-themed-muted"> <p>&copy; 2026 Buxo. All rights reserved.</p> <div class="flex items-center gap-4"> <a href="https://buxo.ai" class="hover:text-accent transition-colors" target="_blank" rel="noopener">Website</a> <a href="https://github.com/buxo-ai" class="hover:text-accent transition-colors" target="_blank" rel="noopener">GitHub</a> </div> </div> </footer> </body></html>
